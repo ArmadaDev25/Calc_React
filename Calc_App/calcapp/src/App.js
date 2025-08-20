@@ -1,20 +1,44 @@
 import logo from './logo.svg';
-import './App.css';
+import './global.css';
 import React, { useState } from 'react';
 
 function App() {
   const [numDisplay, setDisplayNum] = useState(0);
   const [num1, setnum1] = useState(0);
   const [num2, setNum2] = useState(0);
+  const [operator, setOperator] = useState('');
   
-  // This is a boolean to check if num1 is set
-  const isfirstnumset = false;
 
+
+  // This function will set either the first number or the second number in the equation
+  // This is depending on whether the first number is already set
+  function eqNumSet (prop){
+    // If the first number is not set, set it to the prop value
+    if (num1 === 0) {
+      setnum1(prop);
+      
+    }else{
+      setNum2(prop);
+    }
+  }
+
+  // This Function is for setting the numbers used in the equation as well as displaying the currently entered number
   function enterNum (prop) {
     setDisplayNum(prop);
-
-    
+    eqNumSet(prop);
   }
+
+  // This function will set the operator for the equation
+  function setOperaterFunc (prop){
+    setOperator(prop);
+  }
+
+  // This function will calculate the result of the equation based on the numbers and operator set
+  // Called when the user presses the equals button
+  function calculateResult() {
+
+  }
+
 
 
   return (
@@ -22,13 +46,14 @@ function App() {
     // Main DIV that will hold all of the Elements for the 
     <div>
     <h1>Calulator But REACT</h1>
+    <p>Current Equation: {num1} {operator} {num2} </p>
     <p>{numDisplay}</p>
 
     <div>
-      <button>+</button>
-      <button>-</button>
-      <button>*</button>
-      <button>/</button>
+      <button onClick={() => setOperaterFunc('+')}>+</button>
+      <button onClick={() => setOperaterFunc('-')}>-</button>
+      <button onClick={() => setOperaterFunc('*')}>*</button>
+      <button onClick={() => setOperaterFunc('/')}>/</button>
     </div>
     
 
