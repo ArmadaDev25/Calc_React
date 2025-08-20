@@ -8,10 +8,12 @@ function App() {
   const [num2, setNum2] = useState(0);
   
   // This is a boolean to check if num1 is set
-  const is = false;
+  const isfirstnumset = false;
 
   function enterNum (prop) {
     setDisplayNum(prop);
+
+    
   }
 
 
