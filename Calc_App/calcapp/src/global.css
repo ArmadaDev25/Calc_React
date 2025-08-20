@@ -22,3 +22,14 @@ button:hover{
 button:active{
     background-color: #004b5e;
 }
+.CalcMain{
+    align-self: center;
+    background-color: #686868;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+
+}

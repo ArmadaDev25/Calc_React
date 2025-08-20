@@ -70,6 +70,7 @@ function App() {
     // Main DIV that will hold all of the Elements for the 
     <div>
     <h1>Calulator But REACT</h1>
+    <div className='CalcMain'>
     <p>Current Equation: {num1} {operator} {num2} </p>
     <p>{numDisplay}</p>
 
@@ -100,6 +101,7 @@ function App() {
     <button onClick={() => enterNum(7)}>7</button>
     <button onClick={() => enterNum(8)}>8</button>
     <button onClick={() => enterNum(9)}>9</button>
+    </div>
     </div>
 
     </div>
