@@ -36,7 +36,31 @@ function App() {
   // This function will calculate the result of the equation based on the numbers and operator set
   // Called when the user presses the equals button
   function calculateResult() {
+    switch(operator){
+      case "+":
+        setDisplayNum(num1+num2);
+        clearEquation();
+        break;
+      case "-":
+        setDisplayNum(num1-num2);
+        clearEquation();
+        break;
+      case "*":
+        setDisplayNum(num1*num2);
+        clearEquation();
+        break;
+      case "/":
+        setDisplayNum(num1/num2);
+        clearEquation();
+        break;
+    }
+    
+  }
 
+  function clearEquation(){
+    setnum1(0);
+    setNum2(0);
+    setOperator('')
   }
 
 
@@ -54,6 +78,7 @@ function App() {
       <button onClick={() => setOperaterFunc('-')}>-</button>
       <button onClick={() => setOperaterFunc('*')}>*</button>
       <button onClick={() => setOperaterFunc('/')}>/</button>
+      <button onClick={calculateResult}>=</button>
     </div>
     
 
