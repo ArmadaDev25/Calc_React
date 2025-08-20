@@ -10,24 +10,10 @@ function App() {
   // This is a boolean to check if num1 is set
   const is = false;
 
-  function Num1 () {
-    setDisplayNum(1);
+  function enterNum (prop) {
+    setDisplayNum(prop);
   }
-  function enterNum2 () {
-    setDisplayNum(2);
-  }
-  function Num3 () {
-    setDisplayNum(3);
-  }
-    function enterNum4 () {
-    setDisplayNum(4);
-  }
-    function enterNum5 () {
-    setDisplayNum(5);
-  }
-    function enterNum6 () {
-    setDisplayNum(6);
-  }
+
 
   return (
     
@@ -38,21 +24,21 @@ function App() {
     
     {/* Div For Buttons 1 - 3 */}
     <div>
-    <button onClick={Num1}>1</button> 
-    <button onClick={enterNum2}>2</button>
-    <button onClick={Num3}>3</button>
+    <button onClick={() => enterNum(1)}>1</button> 
+    <button onClick={() => enterNum(2)}>2</button>
+    <button onClick={() => enterNum(3)}>3</button>
     </div>
 
     <div>
-    <button onClick={enterNum2}>4</button>
-    <button onClick={enterNum2}>5</button>
-    <button onClick={enterNum2}>6</button>
+    <button onClick={() => enterNum(4)}>4</button>
+    <button onClick={() => enterNum(5)}>5</button>
+    <button onClick={() => enterNum(6)}>6</button>
     </div>
 
     <div>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
+    <button onClick={() => enterNum(7)}>7</button>
+    <button onClick={() => enterNum(8)}>8</button>
+    <button onClick={() => enterNum(9)}>9</button>
     </div>
 
     </div>
