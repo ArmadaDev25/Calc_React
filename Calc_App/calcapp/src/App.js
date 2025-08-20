@@ -23,7 +23,16 @@ function App() {
     <div>
     <h1>Calulator But REACT</h1>
     <p>{numDisplay}</p>
+
+    <div>
+      <button>+</button>
+      <button>-</button>
+      <button>*</button>
+      <button>/</button>
+    </div>
     
+
+
     {/* Div For Buttons 1 - 3 */}
     <div>
     <button onClick={() => enterNum(1)}>1</button> 
