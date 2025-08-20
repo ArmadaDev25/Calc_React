@@ -1,7 +1,12 @@
 body{
     text-align: center;
 }
-
+h1{
+    background-color: gray;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 0;
+}
 button{
     background-color: aquamarine;
     border-radius: 10px;
